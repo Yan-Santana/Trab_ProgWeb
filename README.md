@@ -10,6 +10,22 @@
 
 <hr>
 
+## Instalação de dependências
+
+Para instalar as dependências do projeto em desenvolvimento, execute o seguinte comando:
+
+```bash
+npm install
+```
+
+**Iniciando o app em modo de desenvolvimento**
+
+Esse modo é recomendado para desenvolvimento, pois ele recarrega automaticamente o servidor sempre que você faz alterações no código.
+
+```bash
+npm run dev
+```
+
 ## Antes de tentar executar os comandos abaixo voce devera instalar o git.
 
 #### Link: `https://git-scm.com/downloads`
