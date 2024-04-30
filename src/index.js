@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const app = express();
 
-app.use("/LYFM", express.static(path.resolve(__dirname, "views")));
+app.use("/pages", express.static(path.resolve(__dirname, "views")));
 
 app.use("/api", express.json());
 
