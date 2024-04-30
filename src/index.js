@@ -1,11 +1,10 @@
-const path = require("path");   
 const express = require("express");
 const app = express();
 
-app.use("/pages", express.static(path.resolve(__dirname, "views")));
+const { appRouter } = require('./routes');
 
-app.use("/api", express.json());
+app.use(appRouter);
 
-app.listen(3000, ()=>{
+app.listen(3000, () => {
     console.log("Running at http://localhost:3000");
 });
