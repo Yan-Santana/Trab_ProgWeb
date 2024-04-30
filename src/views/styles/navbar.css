@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ebebf8;
+  color: #faf9f5;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #0e0e11;
+}
+
+.navbar-logo img {
+  height: 113px;
+}
+
+.navbar-links a {
+  color: #faf9f5;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.navbar-icons a {
+  color: #faf9f5;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 24px; /* Ajuste o tamanho dos icons */
+}
