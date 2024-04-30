@@ -1,0 +1,12 @@
+# Para iniciar o container coloque o comando abaixo no terminal:
+# docker-compose up -d
+version: "3.1"
+services:
+  postgresql:
+    container_name: "meucontainer"
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: minhasenha
+    ports:
+      - "5433:5432"
