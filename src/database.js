@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize');
 
-const sequelizeClient = new Sequelize('postgres://postgres:minhasenha@localhost:5432/lyfm', {logging: false});
+const sequelizeClient = new Sequelize(process.env.DATABASE_URL, {logging: false});
 
 module.exports = { sequelizeClient};
