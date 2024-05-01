@@ -3,7 +3,11 @@
     --footer-color: #8162ff;
     --body-color: #030712;
     --text-color: #ffffff;
-}
+    --cinza-color: #1c1c1c;
+    --verde-color: #009929;
+    --font-body: 'Poppins', sans-serif;
+  }
+
 header {
     background-color: var(--body-color);
     padding: 20px;
