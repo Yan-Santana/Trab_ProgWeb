@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loja Virtual</title>
     <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <img src="../images/logo.png" alt="Logo da Loja" />
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="../images/logo.png" alt="Logo da LYFM Store" />
       </div>
-      <nav>
-        <div class="menu-icon">&#9776;</div>
-        <ul>
-          <li><a href="#">Início</a></li>
-          <li><a href="#">Catálogo</a></li>
-          <li><a href="#">Ofertas</a></li>
-        </ul>
-      </nav>
-    </header>
+      <div class="navbar-links">
+        <a href="#">Início</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Catálogo</a>
+      </div>
+      <div class="navbar-icons">
+        <a href="#" class="navbar-icon">👤</a>
+        <a href="#" class="navbar-icon">🛒</a>
+      </div>
+    </nav>
 
     <main>
       <section class="ofertas">
@@ -35,7 +37,6 @@
       </section>
 
       <section class="frete">
-        <h2>Frete Grátis</h2>
         <img src="../images/caminhao.png" alt="Caminhão de Entrega" />
       </section>
     </main>
