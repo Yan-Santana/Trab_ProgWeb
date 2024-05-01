@@ -26,7 +26,7 @@ body {
 
 .container {
   background-color: var(--cinza-color);
-  padding: 40px;
+  padding: 74px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -54,7 +54,11 @@ input {
   margin-bottom: 15px;
   border-radius: 5px;
   border: none;
+<<<<<<< HEAD
   background-color: #1f2124;
+=======
+  background-color: #5c5c5c;
+>>>>>>> f6ffb528b9e0cdf7836840f63cb0016eb829a8f5
   color: var(--text-color);
 }
 
