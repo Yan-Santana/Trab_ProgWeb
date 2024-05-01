@@ -1,6 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const { sequelizeClient } = require('./database');
 
+const { Payment } = require('./payment');
+const { User } = require('./user');
+const { Address } = require('./address');
+
 class Order extends Model {}
 
 Order.init(
@@ -21,5 +25,33 @@ Order.init(
     updatedAt: false,
   },
 );
+
+/** USER FK - ONE TO MANY **/
+User.hasMany(Order, {
+  foreignKey: 'user_id',
+  as: 'order',
+});
+Order.belongsTo(User, {
+  as: 'user',
+});
+
+/** ADDRESS FK - ONE TO MANY **/
+Address.hasMany(Order, {
+  foreignKey: 'address_id',
+  as: 'order',
+});
+Order.belongsTo(Address, {
+  as: 'address',
+});
+
+/** PAYMENT FK **/
+Order.hasOne(Payment, {
+  foreignKey: 'payment_id',
+  as: 'payment',
+});
+Payment.belongsTo(Order, {
+  as: 'order',
+});
+
 
 module.exports = { Order };
