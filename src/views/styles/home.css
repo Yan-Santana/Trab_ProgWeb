@@ -23,7 +23,7 @@ nav ul {
 
 .logo img {
   max-width: 107px;
-  max-height: 163px;
+  max-height: 300px;
   margin-bottom: 10px;
 }
 
@@ -32,7 +32,6 @@ nav li {
 }
 
 nav a {
-  color: #fff;
   text-decoration: none;
 }
 
@@ -41,6 +40,7 @@ main {
 }
 
 .ofertas {
+  width: 100%;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -72,8 +72,8 @@ main {
 
 /* Rodapé */
 footer {
-  background-color: #030712;
-  padding: 20px;
+  background-color: #8162ff;
+  padding: 1px;
   text-align: center;
-  color: #999;
+  color: #ffffff;
 }
