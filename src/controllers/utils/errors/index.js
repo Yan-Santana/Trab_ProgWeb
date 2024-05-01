@@ -8,6 +8,8 @@ const treatError = (error) => {
     };
   }
 
+  console.log(error);
+
   return {
     error: 'Internal server error',
     code: 500,
