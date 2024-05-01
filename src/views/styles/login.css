@@ -5,6 +5,7 @@
   --body-color: #030712;
   --text-color: #ffffff;
   --cinza-color: #1c1c1c;
+  --cinza-input: #1f2124;
   --verde-color: #009929;
   --font-body: 'Poppins', sans-serif;
 }
@@ -54,11 +55,7 @@ input {
   margin-bottom: 15px;
   border-radius: 5px;
   border: none;
-<<<<<<< HEAD
-  background-color: #1f2124;
-=======
-  background-color: #5c5c5c;
->>>>>>> f6ffb528b9e0cdf7836840f63cb0016eb829a8f5
+  background-color: var(--cinza-input);
   color: var(--text-color);
 }
 
