@@ -9,22 +9,34 @@
 
 
 body {
+<<<<<<< HEAD
   margin: 0;
   font-family: var(--font-body);
   background-color: var(--text-color);
   color: var(--text-color);
+=======
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #030712;
+  color: #faf9f5;
+>>>>>>> fc7bfd572b5c2bfa4bb047666f026277e48efce8
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+<<<<<<< HEAD
   padding: 10px 20px;
   background-color: var(--body-color);
+=======
+  padding: 10px 35px;
+  background-color: #030712;
+>>>>>>> fc7bfd572b5c2bfa4bb047666f026277e48efce8
 }
 
 .navbar-logo img {
-  height: 113px;
+  height: 120px;
 }
 
 .navbar-links a {
@@ -39,5 +51,5 @@ body {
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
-  font-size: 24px; /* Ajuste o tamanho dos icons */
+  font-size: 32px; /* Ajuste o tamanho dos icons */
 }
