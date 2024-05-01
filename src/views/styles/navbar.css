@@ -1,7 +1,7 @@
 body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #ebebf8;
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #030712;
   color: #faf9f5;
 }
 
@@ -9,12 +9,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #0e0e11;
+  padding: 10px 35px;
+  background-color: #030712;
 }
 
 .navbar-logo img {
-  height: 113px;
+  height: 120px;
 }
 
 .navbar-links a {
@@ -29,5 +29,5 @@ body {
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
-  font-size: 24px; /* Ajuste o tamanho dos icons */
+  font-size: 32px; /* Ajuste o tamanho dos icons */
 }
