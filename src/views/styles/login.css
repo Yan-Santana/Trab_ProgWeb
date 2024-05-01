@@ -5,7 +5,7 @@
   --body-color: #030712;
   --text-color: #ffffff;
   --cinza-color: #1c1c1c;
-  --verde-color: #4caf50;
+  --verde-color: #009929;
   --font-body: 'Poppins', sans-serif;
 }
 
@@ -26,7 +26,7 @@ body {
 
 .container {
   background-color: var(--cinza-color);
-  padding: 40px;
+  padding: 74px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -54,7 +54,7 @@ input {
   margin-bottom: 15px;
   border-radius: 5px;
   border: none;
-  background-color: var(--cinza-color);
+  background-color: #5c5c5c;
   color: var(--text-color);
 }
 
