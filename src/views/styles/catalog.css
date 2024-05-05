@@ -103,6 +103,10 @@ main {
     height: 185px; 
 }
 
+.produtoImg > img{
+  
+}
+
 
 /* Rodapé */
 footer {
