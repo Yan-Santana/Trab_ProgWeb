@@ -7,6 +7,7 @@
     --verde-color: #009929;
     --font-body: 'Poppins', sans-serif;
   }
+  
 
   header {
     background-color: var(--body-color);
@@ -66,16 +67,17 @@
 main {
     height: 100vh;
     width: 100vw;
-    display: flex;
     
    
 }   
 .catalogContainer {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     text-align: center;
+    
 }
 
 .catalogSubConteiner {
@@ -85,6 +87,7 @@ main {
     width: 388px;
     height: 255px; 
     align-items: center;
+    
 }
    
 .produtoText {
@@ -104,7 +107,10 @@ main {
 }
 
 .produtoImg > img{
-  
+   width: 10rem;
+   height: 7rem;
+   align-items: center;
+   
 }
 
 
@@ -114,4 +120,6 @@ footer {
     padding: 1px;
     text-align: center;
     color: var(--text-color);
+    width: auto;
+    top: 0px;
 }
