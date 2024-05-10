@@ -7,6 +7,12 @@ const userCreationSchema = Joi.object({
   password_confirmation: Joi.string().valid(Joi.ref('password')).required(),
 });
 
+const userTokenCreationSchema = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().min(6).required(),
+});
+
 module.exports = {
+  userTokenCreationSchema,
   userCreationSchema,
 };

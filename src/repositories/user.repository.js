@@ -8,6 +8,11 @@ class UserRepository {
     return user?.toJSON().id || null;
   }
 
+  async findWithPasswordByEmail(email) {
+    const data = await User.findOne({ where: { email } });
+    return data?.toJSON() || null;
+  }
+
   async create(data) {
     const hashedPassword = await bcrypt.hash(data.password, 10);
 
