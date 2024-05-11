@@ -24,7 +24,7 @@ body {
 .product-details {
   flex: 0 0 50%;
   max-width: 50%;
-  padding: 20px;
+  padding: 30px;
   box-sizing: border-box;
 }
 
@@ -40,18 +40,21 @@ body {
 }
 
 .recommended-product {
-  width: 200px;
-  margin: 10px;
+  display: flex; /* Define o contêiner como flexível */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-around; /* Espaçamento uniforme entre os itens */
   text-align: center;
-  font-size: 14px;
 }
 
 .recommended-product img {
-  width: 100%;
-  height: auto;
-  max-width: 200px;
-  max-height: 200px;
-  object-fit: contain;
+  width: 170px;
+  height: 170px;
+  text-align: center;
+}
+
+.image-item {
+  margin: 10px; /* Espaçamento entre os itens */
+  text-align: center;
 }
 
 .product-details button {
