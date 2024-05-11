@@ -39,5 +39,4 @@ Product.belongsToMany(Order, {
   otherKey: 'order_id',
 });
 
-
 module.exports = { OrderProduct }
