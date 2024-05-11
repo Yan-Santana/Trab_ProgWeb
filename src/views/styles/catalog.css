@@ -115,6 +115,7 @@ main {
    height: 7rem;
    align-items: center;
    
+   
 }
 .produtoText > a{
   text-decoration: none;
@@ -123,6 +124,7 @@ main {
   display: flex;
   align-items: center; /* Opções: flex-start, center, flex-end */
   justify-content: center;
+
 }
 
 
