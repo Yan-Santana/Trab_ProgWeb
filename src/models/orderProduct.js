@@ -28,13 +28,13 @@ OrderProduct.init(
 /** MANY TO MANY **/
 Order.belongsToMany(Product, {
   through: OrderProduct,
-  as: 'otherProduct',
+  as: 'orderProduct',
   foreignKey: 'order_id',
   otherKey: 'product_id',
 });
 Product.belongsToMany(Order, {
   through: OrderProduct,
-  as: 'otherProduct',
+  as: 'orderProduct',
   foreignKey: 'product_id',
   otherKey: 'order_id',
 });

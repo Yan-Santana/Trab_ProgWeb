@@ -30,28 +30,28 @@ Order.init(
 User.hasMany(Order, {
   foreignKey: 'user_id',
   as: 'order',
-});
+}); /*
 Order.belongsTo(User, {
   as: 'user',
-});
+}); */
 
 /** ADDRESS FK - ONE TO MANY **/
 Address.hasMany(Order, {
   foreignKey: 'address_id',
   as: 'order',
-});
+}); /*
 Order.belongsTo(Address, {
   as: 'address',
-});
+}); */
 
 /** PAYMENT FK **/
-Order.hasOne(Payment, {
+Payment.hasOne(Order, {
   foreignKey: 'payment_id',
   as: 'payment',
-});
+});/*
 Payment.belongsTo(Order, {
   as: 'order',
-});
+}); */
 
 
 module.exports = { Order };

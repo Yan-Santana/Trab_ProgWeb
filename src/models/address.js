@@ -27,12 +27,10 @@ Address.init(
   },
 );
 
-Address.hasOne(User, {
+
+User.hasOne(Address, {
   foreignKey: 'user_id',
   as: 'user',
-});
-User.belongsTo(Address, {
-  as: 'address',
 });
 
 

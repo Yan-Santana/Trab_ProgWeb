@@ -1,6 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
 const { sequelizeClient } = require('../database');
 
+//const { Address } = require('./address');
+
 class User extends Model {}
 
 User.init(
@@ -15,6 +17,7 @@ User.init(
     name: DataTypes.STRING,
     password: DataTypes.STRING,
     created_at: DataTypes.DATE,
+    //address_id: DataTypes.INTEGER,
   },
   {
     tableName: 'users',
@@ -23,5 +26,6 @@ User.init(
     updatedAt: false,
   },
 );
+
 
 module.exports = { User };
