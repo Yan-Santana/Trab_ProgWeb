@@ -9,8 +9,6 @@
 
 body {
   font-family: var(--font-body);
-  margin: 0;
-  padding: 0;
   background-color: var(--body-color);
   color: var(--text-color);
 }
@@ -82,7 +80,6 @@ main {
 /* Rodapé */
 footer {
   background-color: var(--footer-color);
-  padding: 1px;
   text-align: center;
   color: var(--text-color);
 }

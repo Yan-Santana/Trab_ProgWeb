@@ -1,141 +1,134 @@
-
 :root {
-    --footer-color: #8162ff;
-    --body-color: #030712;
-    --text-color: #ffffff;
-    --cinza-color: #1c1c1c;
-    --verde-color: #009929;
-    --font-body: 'Poppins', sans-serif;
-  }
-  
+  --footer-color: #8162ff;
+  --body-color: #030712;
+  --text-color: #ffffff;
+  --cinza-color: #1c1c1c;
+  --verde-color: #009929;
+  --font-body: 'Poppins', sans-serif;
+}
 
-  header {
-    background-color: var(--body-color);
-    padding: 1.25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .logo img {
-    max-width: 6.68rem;
-    max-height: 18.75rem;
-    margin-bottom: 0.62rem;
-  }
-  
-  nav li {
-    margin-right: 1.25rem;
-  }
-  
-  nav a {
-    text-decoration: none;
-  }
+header {
+  background-color: var(--body-color);
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.logo img {
+  max-width: 6.68rem;
+  max-height: 18.75rem;
+  margin-bottom: 0.62rem;
+}
+
+nav li {
+  margin-right: 1.25rem;
+}
+
+nav a {
+  text-decoration: none;
+}
 
 .ofertas {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 2.5rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .produtos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15.62rem, 1fr));
-    gap: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.62rem, 1fr));
+  gap: 1.25rem;
 }
 .catalogContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 1.25rem;
-    padding: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.25rem;
+  padding: auto;
 }
 
 body {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--body-color);
-    color: var(--text-color);
-    
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
 main {
-    height: 100vh;
-    width: 100vw;
-    
-   
-}   
+  height: auto;
+  width: auto;
+}
 .catalogContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.87rem;
-    text-align: center;
-    
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.87rem;
+  text-align: center;
 }
 
 .catalogSubConteiner {
-    background-color: var(--cinza-color);
-    text-align: center;
-    border-radius: 0.5rem;
-    width: 24.25rem;
-    height: 15.93rem; 
-    align-items: center;
-
-    
+  background-color: var(--cinza-color);
+  text-align: center;
+  border-radius: 0.5rem;
+  width: 24.25rem;
+  height: 15.93rem;
+  align-items: center;
 }
-   
+
 .produtoText {
-    background-color: var(--footer-color);
-    border-radius: 0.5rem;
-    width: 24.25rem;
-    height: 4.37rem;
-   
+  background-color: var(--footer-color);
+  border-radius: 0.5rem;
+  width: 24.25rem;
+  height: 4.37rem;
 }
 
 .produtoImg {
-    background-color: var(--cinza-color);
-    text-align: center;
-    border-radius: 0.5rem;
-    width: 24.25rem;
-    height: 11.56rem; 
-    
+  background-color: var(--cinza-color);
+  text-align: center;
+  border-radius: 0.5rem;
+  width: 24.25rem;
+  height: 11.56rem;
 }
 
-.produtoImg > img{
-   width: 10rem;
-   height: 7rem;
-   align-items: center;
-   
+.produtoImg > img {
+  width: 10rem;
+  height: 7rem;
+  align-items: center;
 }
-.produtoText > a{
+.produtoText > a {
   text-decoration: none;
   color: var(--text-color);
-  height: 6.25rem; 
-  display: flex;
-  align-items: center; /* Opções: flex-start, center, flex-end */
-  justify-content: center;
+  height: 6.25rem;
+  padding: 20px;
 }
 
+.cash {
+  font-size: 1.25rem;
+  border-radius: 30px;
+}
 
 /* Rodapé */
 footer {
-    background-color: var(--footer-color);
-    padding: 1px;
-    text-align: center;
-    color: var(--text-color);
-    width: auto;
-    top: 0px;
+  background-color: var(--footer-color);
+  padding: 1px;
+  text-align: center;
+  color: var(--text-color);
+  width: auto;
+  top: 0px;
 }
 
-.produtoText:hover{
+.produtoText:hover {
   background-color: #b6abdf;
 }
+
