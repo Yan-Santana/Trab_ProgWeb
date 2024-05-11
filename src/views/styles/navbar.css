@@ -7,7 +7,6 @@
   --font-body: 'Poppins', sans-serif;
 }
 
-
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -41,9 +40,10 @@ body {
 }
 
 .navbar-icons a {
-  color: var(--text-color)  ;
+  color: var(--text-color);
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
-  font-size: 32px; /* Ajuste o tamanho dos icons */
+  font-size: 32px;
 }
+
