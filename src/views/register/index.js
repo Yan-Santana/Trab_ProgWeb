@@ -6,7 +6,7 @@ document.getElementById('userRegistrationForm').addEventListener('submit', funct
   const password = document.getElementById('password').value;
   const passwordConfirmation = document.getElementById('passwordConfirmation').value;
 
-  fetch('https://5c57-170-80-35-17.ngrok-free.app/api/users/signup', {
+  fetch('http://localhost:3000/api/users/signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -31,3 +31,4 @@ document.getElementById('userRegistrationForm').addEventListener('submit', funct
       showSuccessToast('Usuario Cadastrado com sucesso');
     });
 });
+
