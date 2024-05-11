@@ -14,7 +14,7 @@ const syncdatabase = async () => {
   await Order.sync();
   await OrderProduct.sync();
   await Payment.sync();
-  await Photo.sync();
+  await Photo.sync({ force: true });
   await ProductCart.sync();
 };
 

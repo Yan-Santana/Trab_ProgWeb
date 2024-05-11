@@ -11,6 +11,7 @@ Photo.init(
       autoIncrement: true,
     },
     filename: DataTypes.STRING,
+    url: DataTypes.STRING,
   },
   {
     tableName: 'photos',
