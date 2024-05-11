@@ -28,7 +28,7 @@ class UserServices {
     const isTheSamePassword = bcrypt.compareSync(data.password, user.password);
     if (!isTheSamePassword) throw new BadRequest('Senha inválida');
 
-    const token = jwt.sign({ id: user.id }, process.env.APP_SECRET_KEY, { expiresIn: '24h' });
+    const token = jwt.sign({ id: user.id, role: user.role }, process.env.APP_SECRET_KEY, { expiresIn: '24h' });
     return { token };
   }
 }

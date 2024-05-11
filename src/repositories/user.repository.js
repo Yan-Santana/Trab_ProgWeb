@@ -27,6 +27,17 @@ class UserRepository {
       password: undefined,
     };
   }
+
+  async findById(id){
+    const user = await User.findOne({
+      where: { id }
+    })
+
+    return {
+      ...user.toJSON(),
+      password: undefined,
+    }
+  };
 }
 
 module.exports = {
