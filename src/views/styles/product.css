@@ -1,9 +1,9 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #000;
   color: #fff;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
 .container {
@@ -50,6 +50,7 @@ body {
   width: 170px;
   height: 170px;
   text-align: center;
+  padding: 10px;
 }
 
 .image-item {
@@ -65,5 +66,18 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+}
+
+footer {
+  background-color: var(--footer-color);
+  padding: 1px;
+  text-align: center;
+  color: var(--text-color);
+  width: auto;
+  top: 0px;
+}
+.topicos:hover{
+  background-color: #8162ff;
+  border-radius: 4px;
 }
 
