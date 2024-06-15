@@ -1,22 +1,10 @@
-*{
-    margin: 0;
-    border: 0;
-    padding: 30px;
-}
 
-
-body{
-    width: 41.56rem;
-    height: 55.12rem;
-    background-color: rgb(69, 67, 71);
-
-}
-
-main{
+.mainCart{
     width: 37.81rem;
     height: 47.18rem;
-
+    display: none;
 }
+
 
 .List-Products{
     width: 37.81rem;
