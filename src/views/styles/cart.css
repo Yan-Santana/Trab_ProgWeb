@@ -13,19 +13,30 @@ body {
   background-color: var(--cinza-color);
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  height: 755px;
+  width: 605px;
 }
-
-header {
+/* inicio dos elementos do header*/
+.headerCart {
     background-color: var(--cinza-color);
     padding: 5px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     width: 100%;
     text-align: center;
     color: var(--text-color);
+    border: 1px solid var(--footer-color);
+    border-radius: 5px;
+    width: 605px;
   }
+  
+  .textHeader {
+    font-size: 20px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid var(--footer-color);
+  }
+  /* fim dos elementos do header*/
 
 .containerMain {
   display: flex;
@@ -35,10 +46,42 @@ header {
   background-color: var(--cinza-color);
   color: var(--text-color);
   font-family: var(--font-body);
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  width: 100%;
+  gap: 100px;
 }
+
+.containerProducts {
+    margin: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cinza-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  box-sizing: border-box;
+  width: 100%;
+  gap: 20px;
+}
+
+.subProducts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    box-sizing: border-box;
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    height: 20px;
+    width: 605px;
+}
+
+
+
 
 
 
