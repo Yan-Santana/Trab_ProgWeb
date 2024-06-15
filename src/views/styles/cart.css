@@ -1,27 +1,44 @@
 
-.mainCart{
-    width: 37.81rem;
-    height: 47.18rem;
-    display: none;
+:root {
+    --footer-color: #8162ff;
+    --body-color: #030712;
+    --text-color: #ffffff;
+    --cinza-color: #1c1c1c;
+    --verde-color: #009929;
+    --font-body: 'Poppins', sans-serif;
+  }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--cinza-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+header {
+    background-color: var(--cinza-color);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: var(--text-color);
+  }
 
-.List-Products{
-    width: 37.81rem;
-    height: 13.25rem;
+.containerMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cinza-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.Count-Summary{
-    width: 37.81rem;
-    height: 12rem;
-    padding: 1px;
-
-}
-.subCount{
-    width: 37.81rem;
-    height: 1.31rem;
-    padding: 1px;
-
-}
 
 
