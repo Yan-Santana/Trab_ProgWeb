@@ -73,10 +73,10 @@ footer {
   padding: 1px;
   text-align: center;
   color: var(--text-color);
-  width: auto;
+  width: 100%;
   top: 0px;
 }
-.topicos:hover{
+.topicos:hover {
   background-color: #8162ff;
   border-radius: 4px;
 }
