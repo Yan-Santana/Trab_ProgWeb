@@ -8,14 +8,14 @@ const { ProductCart } = require('./productCart');
 const { User } = require('./user');
 
 const syncdatabase = async () => {
-  await User.sync( {force: true} );
-  await Address.sync( {force: true} );
-  await Photo.sync({force: true});
-  await Product.sync({force: true});
-  await ProductCart.sync({force: true}); // User e Product
-  await Payment.sync({force: true});
-  await Order.sync({force: true});
-  await OrderProduct.sync({force: true}); // Order e Product
+  await User.sync();
+  await Address.sync();
+  await Photo.sync();
+  await Product.sync();
+  await ProductCart.sync(); // User e Product
+  await Payment.sync();
+  await Order.sync();
+  await OrderProduct.sync(); // Order e Product
 };
 
 module.exports = { syncdatabase };
