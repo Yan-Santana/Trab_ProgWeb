@@ -1,4 +1,4 @@
-const Joi = require("joi");
+const Joi = require('joi');
 
 const createProductValidadorSchema = Joi.object({
   name: Joi.string().required(),
@@ -6,7 +6,7 @@ const createProductValidadorSchema = Joi.object({
   price: Joi.number().integer().positive().required(),
   old_price: Joi.number().integer().positive().required(),
   stock: Joi.number().integer().positive().required(),
-  rating: Joi.number().integer().positive().required()
+  rating: Joi.number().integer().min(0).max(5).required(),
 });
 
-module.exports = {createProductValidadorSchema};
+module.exports = { createProductValidadorSchema };
