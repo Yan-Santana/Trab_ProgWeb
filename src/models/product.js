@@ -28,7 +28,7 @@ Product.init(
   },
 );
 
-Photo.hasOne(Product, {
+Product.belongsTo(Photo, {
   foreignKey: 'photo_id',
   as: 'photo',
 });
