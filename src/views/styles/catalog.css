@@ -6,6 +6,7 @@
   --cinza-color: #1c1c1c;
   --verde-color: #009929;
   --font-body: 'Roboto', sans-serif;
+  --footer-color: #8162ff;
 }
 
 header {
@@ -51,7 +52,6 @@ body {
 main {
   height: auto;
   width: auto;
-  margin: 0.25rem;
 }
 .catalogContainer {
   width: 100%;
@@ -65,7 +65,7 @@ main {
 }
 
 .catalogSubConteiner {
-  background-color: var(--cinza-color);
+  background-color: var(--footer-color);
   text-align: center;
   border-radius: 0.5rem;
   width: 24.25rem;
@@ -83,7 +83,6 @@ main {
 .produtoImg {
   background-color: var(--cinza-color);
   text-align: center;
-  border-radius: 0.5rem;
   width: 24.25rem;
   height: 11.56rem;
 }
@@ -93,6 +92,7 @@ main {
   height: 7rem;
   align-items: center;
 }
+
 .produtoText > a {
   text-decoration: none;
   color: var(--text-color);
