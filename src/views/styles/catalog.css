@@ -45,11 +45,13 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--body-color);
-  color: var(--text-color);
+  min-width: 100vh;
+  min-height: 100vh;
 }
 main {
   height: auto;
   width: auto;
+  margin: 0.25rem;
 }
 .catalogContainer {
   width: 100%;
@@ -100,12 +102,13 @@ main {
 
 /* Rodapé */
 footer {
-  background-color: var(--footer-color);
-  padding: 1px;
-  text-align: center;
-  color: var(--text-color);
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  top: 0px;
+  background-color: var(--footer-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px;
 }
 
 .produtoText:hover {
