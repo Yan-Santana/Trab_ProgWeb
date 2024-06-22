@@ -1,7 +1,7 @@
 const { productServices } = require('../services/product.services');
 const { treatError } = require('./utils/errors');
 const { validateSchema } = require('./utils/validators');
-const { createProductValidadorSchema } = require('./utils/validators/products');
+const { createProductValidadorSchema, listProductValidadorSchema } = require('./utils/validators/products');
 
 class ProductsController {
   async create(req, res) {
@@ -24,6 +24,18 @@ class ProductsController {
       res.status(treatedError.code).json(treatedError);
     }
   }
+
+  async listAll(req, res) {
+    try {
+      const validatedData = validateSchema(listProductValidadorSchema, req.query);
+      const products = await productServices.list(validatedData);
+      return res.status(200).json(products);
+    } catch (error) {
+      const treatedError = treatError(error);
+      res.status(treatedError.code).json(treatedError);
+    }
+  }
+
 }
 
 module.exports = {

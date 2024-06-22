@@ -10,5 +10,6 @@ productsRouter.use(authorize);
 
 productsRouter.post('/', fileUploader.single('photo'), productsController.create);
 productsRouter.get('/:id', productsController.getDetails);
+productsRouter.get('/', productsController.listAll);
 
 module.exports = { productsRouter };
