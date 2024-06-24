@@ -9,7 +9,7 @@ const { photoRepository } = require('../../repositories/photo.repository');
 /** @type {multer.Multer} */
 const fileUploader = Multer({
   fileFilter: (req, file, cb) => {
-    const filetypes = /jpeg|jpg|png/;
+    const filetypes = /jpeg|jpg|png|svg/;
     const mimetype = filetypes.test(file.mimetype);
     const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
 
