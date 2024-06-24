@@ -9,4 +9,12 @@ const createProductValidadorSchema = Joi.object({
   rating: Joi.number().integer().min(0).max(5).required(),
 });
 
-module.exports = { createProductValidadorSchema };
+const listProductValidadorSchema = Joi.object({
+  page: Joi.number().integer().positive().default(0),
+  limit: Joi.number().integer().positive().default(10),
+  category: Joi.string(),
+  orderByPrice: Joi.string().valid("desc", "asc"),
+  name: Joi.string(),
+})
+
+module.exports = { createProductValidadorSchema, listProductValidadorSchema };
