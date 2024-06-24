@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
-  --footer-color: #8162ff;
+  --footer-color: #ccc;
   --body-color: #030712;
   --text-color: #ffffff;
   --cinza-color: #1c1c1c;
   --verde-color: #009929;
   --font-body: 'Roboto', sans-serif;
+  --footer-color: #8162ff;
 }
 
 header {
@@ -45,7 +46,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--body-color);
-  color: var(--text-color);
+  min-width: 100vh;
+  min-height: 100vh;
 }
 main {
   height: auto;
@@ -63,7 +65,7 @@ main {
 }
 
 .catalogSubConteiner {
-  background-color: var(--cinza-color);
+  background-color: var(--footer-color);
   text-align: center;
   border-radius: 0.5rem;
   width: 24.25rem;
@@ -81,7 +83,6 @@ main {
 .produtoImg {
   background-color: var(--cinza-color);
   text-align: center;
-  border-radius: 0.5rem;
   width: 24.25rem;
   height: 11.56rem;
 }
@@ -91,6 +92,7 @@ main {
   height: 7rem;
   align-items: center;
 }
+
 .produtoText > a {
   text-decoration: none;
   color: var(--text-color);
@@ -100,12 +102,13 @@ main {
 
 /* Rodapé */
 footer {
-  background-color: var(--footer-color);
-  padding: 1px;
-  text-align: center;
-  color: var(--text-color);
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  top: 0px;
+  background-color: var(--footer-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px;
 }
 
 .produtoText:hover {
