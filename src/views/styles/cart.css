@@ -13,8 +13,8 @@ body {
   background-color: var(--cinza-color);
   margin: 0;
   padding: 0;
-  height: 755px;
-  width: 605px;
+  height: 43.75rem;
+  width: 37.81rem;
 }
 /* inicio dos elementos do header*/
 .headerCart {
@@ -22,12 +22,11 @@ body {
     padding: 5px;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 605px;
     text-align: center;
     color: var(--text-color);
-    border: 1px solid var(--footer-color);
-    border-radius: 5px;
-    width: 605px;
+   font-family: var(--font-body);
+  
   }
   
   .textHeader {
@@ -48,11 +47,12 @@ body {
   font-family: var(--font-body);
   box-sizing: border-box;
   width: 100%;
-  gap: 100px;
+  gap: 50px;
+  padding: 10px;
 }
 
 .containerProducts {
-    margin: 0%;
+  margin: 0%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,6 +63,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   gap: 20px;
+
 }
 
 .subProducts{
@@ -76,10 +77,21 @@ body {
     box-sizing: border-box;
     border: 1px solid var(--text-color);
     padding: 10px;
-    height: 20px;
-    width: 605px;
 }
 
+.containerTotal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cinza-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    box-sizing: border-box;
+    width: 100%;
+    gap: 5px;
+    padding: 5px;
+}
 
 
 
