@@ -26,7 +26,8 @@ form.addEventListener('submit', (e) => {
     .then((data) => {
       console.log('Usuario logado com sucesso:');
       showSuccessToast('Usuario logado com sucesso');
+
+      localStorage.setItem('token', data.token);
       window.location.href = '../home';
     });
 });
-
