@@ -1,5 +1,5 @@
 function returnToCatalog(){
-  window.location.href = "../catalog";
+  window.location.href = "../not-found";
 }
 
 function getProductID(){
