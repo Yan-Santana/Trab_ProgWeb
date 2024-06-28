@@ -72,12 +72,3 @@ li {
   border-radius: 4px;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--footer-color);
-  color: var(--text-color);
-  text-align: center;
-  padding: 10px;
-}

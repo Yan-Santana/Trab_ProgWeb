@@ -52,6 +52,7 @@ body {
 main {
   height: auto;
   width: auto;
+  
 }
 .catalogContainer {
   width: 100%;
@@ -61,7 +62,8 @@ main {
   flex-wrap: wrap;
   gap: 1.87rem;
   text-align: center;
-  padding: 1.5rem;
+  padding-bottom: 30vh;
+  
 }
 
 .catalogSubConteiner {
@@ -100,16 +102,7 @@ main {
   padding: 20px;
 }
 
-/* Rodapé */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--footer-color);
-  color: var(--text-color);
-  text-align: center;
-  padding: 10px;
-}
+
 
 .produtoText:hover {
   background-color: #b6abdf;
