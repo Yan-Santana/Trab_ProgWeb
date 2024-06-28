@@ -105,6 +105,7 @@ main {
   background-color: #1a1a1a;
   border-radius: 1rem;
   margin-bottom: 0.5rem;
+  position: relative; /* Novo */
 }
 
 .productCardImageContainer img {
@@ -116,9 +117,9 @@ main {
   padding: 0.2rem 0.5rem;
   background-color: var(--footer-color);
   border-radius: 1rem 0;
-  position: relative;
-  bottom: 80px;
-  left: -13px;
+  position: absolute; /* Novo */
+  bottom: 164px; /* Novo */
+  left: 2px; /* Novo */
 }
 
 .productNameContainer {
