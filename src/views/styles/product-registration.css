@@ -55,6 +55,33 @@ button:hover {
   background-color: #218838;
 }
 
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#productImage {
+  height: 250px;
+  width: 300px;
+  object-fit: fill;
+  align-self: center;
+}
+
+#productImageInput {
+  display: none;
+}
+
+#productImageInputLabel {
+  height: 2rem;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #productList {
   margin-top: 20px;
 }

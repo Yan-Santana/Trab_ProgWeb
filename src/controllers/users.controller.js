@@ -30,6 +30,10 @@ class UsersController {
       res.status(treatedError.code).json(treatedError);
     }
   }
+
+  async returnThatTokenIsValid(req, res) {
+    res.status(200).json({ isValid: true });
+  }
 }
 
 module.exports = {

@@ -72,6 +72,7 @@ label {
 }
 
 input,
+select,
 textarea {
   padding: 8px;
   margin-top: 5px;
@@ -110,4 +111,3 @@ li {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
-
