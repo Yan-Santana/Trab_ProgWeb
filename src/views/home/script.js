@@ -10,6 +10,15 @@ document.getElementById("categoryfilter").addEventListener('change', (event)=>{
   fetchProducts();
 })
 
+document.querySelector('.searchBarContainer').addEventListener('input', (event) => {
+  if (!event.target.value) {
+    delete filters.name;
+  } else {
+    filters.name = event.target.value;
+  }
+  fetchProducts();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   fetchProducts();
 });

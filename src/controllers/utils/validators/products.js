@@ -10,8 +10,6 @@ const createProductValidadorSchema = Joi.object({
 });
 
 const listProductValidadorSchema = Joi.object({
-  page: Joi.number().integer().positive().default(0),
-  limit: Joi.number().integer().positive().default(10),
   category: Joi.string(),
   orderByPrice: Joi.string().valid("desc", "asc"),
   name: Joi.string(),

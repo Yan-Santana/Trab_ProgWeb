@@ -16,8 +16,6 @@ class ProductRepository {
   async findAll(params) {
     const where = {}; //objeto
     const order = []; //array
-    const limit = params.limit;
-    const page = params.page;
 
     if (params.category){
       where.category = params.category;
@@ -32,7 +30,7 @@ class ProductRepository {
     }
 
     return await Product.findAll({
-      where, order, limit, offset: (limit * page),
+      where, order,
       include: [{
         association: 'photo',
         attributes: ['url']
