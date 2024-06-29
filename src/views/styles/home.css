@@ -103,6 +103,13 @@ footer {
   flex-direction: column;
   color: var(--text-color);
   gap: 0.5rem;
+  transition: 0.5s;
+}
+
+.productCardContainer:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: 0.3s;
 }
 
 .productCardImageContainer {
