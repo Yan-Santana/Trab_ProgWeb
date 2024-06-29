@@ -20,8 +20,9 @@ function fetchProducts() {
 function createProductElement(product) {
   const hasDiscount = product.old_price && product.old_price > product.price;
 
-  const productContainer = document.createElement('div');
+  const productContainer = document.createElement('a');
   productContainer.classList.add('productCardContainer');
+  productContainer.href = `${window.location.origin}/product?id=${product.id}`;
   productContainer.innerHTML = `
     <div class="productCardImageContainer">
 
