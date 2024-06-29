@@ -31,6 +31,16 @@ body {
   align-items: center;
 }
 
+.product-rating {
+  color: #8162ff;
+  font-size: 40px;
+  margin: 0;
+}
+
+.product-pricetag{
+  font-size: 30px;
+}
+
 .discount {
   color: #8162ff;
 }

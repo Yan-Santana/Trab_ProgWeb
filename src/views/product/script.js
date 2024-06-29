@@ -1,4 +1,4 @@
-function returnToCatalog() {
+function returnToNotFound() {
   window.location.href = '../not-found';
 }
 
@@ -7,7 +7,7 @@ function getProductID() {
   const productID = params.get('id');
 
   if (!productID) {
-    returnToCatalog();
+    returnToNotFound();
   }
 
   return Number(productID);
@@ -18,7 +18,7 @@ async function findAndLoadProduct() {
   const product = await (await fetch(`http://localhost:3000/api/products/${productID}`)).json();
 
   if (!product) {
-    returnToCatalog();
+    returnToNotFound();
   }
 
   const name = document.getElementById('name');
