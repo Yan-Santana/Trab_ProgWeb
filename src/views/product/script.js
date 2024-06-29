@@ -32,5 +32,5 @@ async function findAndLoadProduct() {
   image.setAttribute('src', product.photo.url);
 }
 
-//findAndLoadProduct();
+findAndLoadProduct();
 

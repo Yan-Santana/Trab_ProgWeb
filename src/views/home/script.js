@@ -1,9 +1,21 @@
+const filters = {}
+
+document.getElementById("categoryfilter").addEventListener('change', (event)=>{
+  if (!event.target.value){
+    delete filters.category;
+  } else {
+    filters.category = event.target.value;
+  }
+
+  fetchProducts();
+})
+
 document.addEventListener('DOMContentLoaded', () => {
   fetchProducts();
 });
 
 function fetchProducts() {
-  fetch(window.location.origin + '/api/products') // TODO: Verificar com o Felipe se vai ser essa rota mesmo da Api
+  fetch(window.location.origin + '/api/products?' + new URLSearchParams(filters))
     .then((response) => response.json())
     .then((data) => {
       const productsContainer = document.getElementById('productsContainer');

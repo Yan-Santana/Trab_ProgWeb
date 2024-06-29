@@ -137,3 +137,15 @@ main {
   color: var(--footer-color);
   font-size: 1.25rem;
 }
+
+.searchBarContainer {
+  width: 50rem;
+  padding: 10px;
+  font-size: 23px;
+  margin-bottom: 60px;
+}
+
+.categoryFilterContainer {
+  padding: 10px;
+  font-size: 23px;
+}
