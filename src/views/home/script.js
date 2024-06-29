@@ -3,41 +3,45 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchProducts() {
-  fetch('/api/products') // TODO: Verificar com o Felipe se vai ser essa rota mesmo da Api
+  fetch(window.location.origin + '/api/products') // TODO: Verificar com o Felipe se vai ser essa rota mesmo da Api
     .then((response) => response.json())
     .then((data) => {
-      const catalogContainer = document.getElementById('catalogo');
-      catalogContainer.innerHTML = '';
+      const productsContainer = document.getElementById('productsContainer');
+      productsContainer.innerHTML = '';
 
       data.forEach((product) => {
         const productElement = createProductElement(product);
-        catalogContainer.appendChild(productElement);
+        productsContainer.appendChild(productElement);
       });
     })
     .catch((error) => console.error('Error fetching products:', error));
 }
 
 function createProductElement(product) {
+  const hasDiscount = product.old_price && product.old_price > product.price;
+
   const productContainer = document.createElement('div');
-  productContainer.className = 'catalogSubConteiner';
+  productContainer.classList.add('productCardContainer');
+  productContainer.innerHTML = `
+    <div class="productCardImageContainer">
 
-  const productImg = document.createElement('div');
-  productImg.className = 'produtoImg';
-  const img = document.createElement('img');
-  img.src = `../src/images/${product.image}`;
-  img.alt = product.name;
-  productImg.appendChild(img);
+      ${
+        hasDiscount
+          ? `<span class="discountPercentageContainer">${getDiscount(product.price, product.old_price)}%</span>`
+          : ' '
+      }
 
-  const productText = document.createElement('div');
-  productText.className = 'produtoText';
-  const link = document.createElement('a');
-  link.href = `product.html?id=${product.id}`;
-  link.textContent = product.name;
-  productText.appendChild(link);
+      <img src="${product.photo.url}" alt="Produto" />
+    </div>
+    <span class="productNameContainer">${product.name}</span>
+    <div>
+      <b>${parseNumberToBRL(product.price)}</b>
 
-  productContainer.appendChild(productImg);
-  productContainer.appendChild(productText);
-
+      ${hasDiscount ? `<span class="discountContainer">${parseNumberToBRL(product.old_price)}</span>` : ' '}
+    </div>
+    <span class="starsContainer">${getStarRating(product.rating)}</span>
+  `;
   return productContainer;
 }
 
+fetchProducts();

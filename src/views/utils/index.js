@@ -10,28 +10,30 @@ function parseNumberToBRL(value) {
   return (value / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
+function getDiscount(value, oldValue) {
+  const discount = ((oldValue - value) / oldValue) * 100;
+  return Math.round(discount);
+}
+
 function getStarRating(value) {
-
-  switch(value){
-
+  switch (value) {
     default:
     case 0:
-      return "☆☆☆☆☆";
+      return '☆☆☆☆☆';
 
     case 1:
-      return "★☆☆☆☆";
+      return '★☆☆☆☆';
 
     case 2:
-      return "★★☆☆☆";
+      return '★★☆☆☆';
 
     case 3:
-      return "★★★☆☆";
+      return '★★★☆☆';
 
     case 4:
-      return "★★★★☆";
+      return '★★★★☆';
 
     case 5:
-      return "★★★★★";
+      return '★★★★★';
   }
-
 }
