@@ -7,6 +7,10 @@
   --font-body: 'Poppins', sans-serif;
 }
 
+* {
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -111,4 +115,3 @@ li {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
-
