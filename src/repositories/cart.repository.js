@@ -8,6 +8,24 @@ class CartRepository {
       quantity,
     });
   }
+
+  async findAllProductsByUser(userId) {
+    return await ProductCart.findAll({
+      where: {
+        user_id: userId
+      },
+      include: [{
+        association: 'product',
+        attributes: ['name', 'price', 'old_price'],
+        include: {
+          association: 'photo',
+          attributes: ['url']
+        }
+      }],
+      attributes: ['quantity']
+    });
+  }
+
 }
 
 module.exports = {

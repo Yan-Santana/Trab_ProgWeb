@@ -9,6 +9,9 @@ class PhotoRepository {
       })
     ).toJSON();
   }
+
+
+
 }
 
 module.exports = { photoRepository: new PhotoRepository() };

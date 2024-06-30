@@ -38,5 +38,9 @@ Product.belongsToMany(User, {
   foreignKey: 'product_id',
   otherKey: 'user_id',
 });
+ProductCart.belongsTo(Product, {
+  foreignKey: 'product_id',
+  as: 'product'
+});
 
 module.exports = { ProductCart };
