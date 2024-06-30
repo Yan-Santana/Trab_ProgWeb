@@ -1,14 +1,8 @@
-const filters = {}
+const filters = {};
 
-document.getElementById("categoryfilter").addEventListener('change', (event)=>{
-  if (!event.target.value){
-    delete filters.category;
-  } else {
-    filters.category = event.target.value;
-  }
-
-  fetchProducts();
-})
+document.getElementById('categoryfilter').addEventListener('change', (event) => {
+  setCategoryFilter(event.target.value);
+});
 
 document.querySelector('.searchBarContainer').addEventListener('input', (event) => {
   if (!event.target.value) {
@@ -20,7 +14,7 @@ document.querySelector('.searchBarContainer').addEventListener('input', (event) 
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetchProducts();
+  setCategoryFilter();
 });
 
 function fetchProducts() {
@@ -36,6 +30,25 @@ function fetchProducts() {
       });
     })
     .catch((error) => console.error('Error fetching products:', error));
+}
+
+function setCategoryFilter(category) {
+  if (category !== undefined) {
+    if (!category) {
+      delete filters.category;
+    } else {
+      filters.category = category;
+    }
+    return fetchProducts();
+  }
+  const params = new URLSearchParams(window.location.search);
+  const categoryByURL = params.get('category');
+
+  if (categoryByURL) {
+    filters.category = categoryByURL;
+  }
+
+  return fetchProducts();
 }
 
 function createProductElement(product) {
@@ -67,3 +80,4 @@ function createProductElement(product) {
 }
 
 fetchProducts();
+

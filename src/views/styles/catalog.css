@@ -44,10 +44,11 @@ body {
 main {
   height: auto;
   width: auto;
-  
 }
 .catalogContainer {
   width: 100%;
+  height: auto;
+  margin-top: 7rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -55,7 +56,6 @@ main {
   gap: 1.87rem;
   text-align: center;
   padding-bottom: 30vh;
-  
 }
 
 .catalogSubConteiner {
@@ -93,8 +93,6 @@ main {
   height: 6.25rem;
   padding: 20px;
 }
-
-
 
 .produtoText:hover {
   background-color: #b6abdf;
