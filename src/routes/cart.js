@@ -7,5 +7,6 @@ const { authorize } = require('../controllers/middlewares/authentication');
 cartsRouter.use(authorize);
 
 cartsRouter.post('/add-product', cartsController.addProduct);
+cartsRouter.get('/', cartsController.listCartItems);
 
 module.exports = { cartsRouter };

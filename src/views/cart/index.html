@@ -11,7 +11,7 @@
     <header class = "headerCart">
         <div class = "subHeader">
             <span>🛒Carrinho</span>
-            
+
         </div>
         <div class = "subHeader">
             <a href="../home/index.html">Início</a>
@@ -22,40 +22,9 @@
 
     <main>
 
-        <ul class = "containerProducts">
-            <div class = "subProducts">
-                <img src="../images/conversation-svgrepo-com.svg" alt="imagem do produto">
-                <div>
-                    <span>Produto 1</span>
-                    <span>R$ 100,00</span>
-                </div>
-            </div>
-            <div class = "subProducts">
-                <img src="../images/conversation-svgrepo-com.svg" alt="imagem do produto">
-                <div>
-                    <span>Produto 2</span>
-                    <span>R$ 200,00</span>
-                </div>
-            </div>
-            <div class = "subProducts">
-                <img src="../images/conversation-svgrepo-com.svg" alt="imagem do produto">
-                <div>
-                    <span>Produto 3</span>
-                    <span>R$ 300,00</span>
-                </div>
-                
-            </div>
-        </ul>
+        <ul class = "containerProducts" id="containerProducts"></ul>
 
         <ul class = "containerTotal" >
-            <div class = "subContainerTotal">
-                <div>
-                    <p>SubTotal</p>
-                </div>
-                <div>
-                    <span>R$ 600,00</span>
-                </div>
-            </div>
             <div class = "subContainerTotal">
                 <div>
                     <p>Entrega</p>
@@ -70,7 +39,7 @@
                     <p>Descontos</p>
                 </div>
                 <div>
-                    <span>- R$ 600,00</span>
+                    <span id="discount"></span>
                 </div>
             </div>
 
@@ -78,8 +47,8 @@
                 <div>
                     <h3>Total</h3>
                 </div>
-                <div> 
-                    <span>R$ 600,00</span>
+                <div>
+                    <span id="price"></span>
                 </div>
             </div>
         </ul>
@@ -87,11 +56,10 @@
             <div class="botao1">
                 <button>Finalizar Compra</button>
             </div>
-            <div class="botao2">
-                <button>Limpar Carrinho</button>
-            </div>
         </div>
     </main>
-    
+    <script src="../utils/auth.js"></script>
+    <script src="../utils/index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

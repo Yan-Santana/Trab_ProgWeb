@@ -17,6 +17,17 @@ class CartsController {
       res.status(treatedError.code).json(treatedError);
     }
   }
+
+  async listCartItems(req, res) {
+    try {
+      const cart = await cartServices.listAllProductsByUser(req.user.id);
+      return res.status(200).json(cart);
+    } catch(error){
+      const treatedError = treatError(error);
+      res.status(treatedError.code).json(treatedError);
+    }
+  }
+
 }
 
 module.exports = { cartsController: new CartsController() };
