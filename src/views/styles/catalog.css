@@ -31,14 +31,6 @@ nav a {
   text-decoration: none;
 }
 
-.catalogContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 1.25rem;
-  padding: auto;
-}
 
 body {
   box-sizing: border-box;
