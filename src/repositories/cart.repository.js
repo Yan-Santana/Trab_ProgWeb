@@ -12,20 +12,29 @@ class CartRepository {
   async findAllProductsByUser(userId) {
     return await ProductCart.findAll({
       where: {
-        user_id: userId
+        user_id: userId,
       },
-      include: [{
-        association: 'product',
-        attributes: ['name', 'price', 'old_price'],
-        include: {
-          association: 'photo',
-          attributes: ['url']
-        }
-      }],
-      attributes: ['quantity']
+      include: [
+        {
+          association: 'product',
+          attributes: ['name', 'price', 'old_price'],
+          include: {
+            association: 'photo',
+            attributes: ['url'],
+          },
+        },
+      ],
+      attributes: ['quantity'],
     });
   }
 
+  async buy(userId) {
+    return await ProductCart.destroy({
+      where: {
+        user_id: userId,
+      },
+    });
+  }
 }
 
 module.exports = {

@@ -1,11 +1,12 @@
-async function fetchAndRenderProducts (){
-
-  const response = await (await fetch('http://localhost:3000/api/carts', {
-    method: 'GET',
-    headers: {
-      Authorization: `Bearer ${localStorage.getItem('token')}`,
-    },
-  })).json();
+async function fetchAndRenderProducts() {
+  const response = await (
+    await fetch('http://localhost:3000/api/carts', {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+    })
+  ).json();
 
   const productsContainer = document.getElementById('containerProducts');
   productsContainer.innerHTML = '';
@@ -15,17 +16,16 @@ async function fetchAndRenderProducts (){
     productsContainer.appendChild(productElement);
   });
 
-  const discount = document.getElementById("discount");
-  const price = document.getElementById("price");
+  const discount = document.getElementById('discount');
+  const price = document.getElementById('price');
 
   discount.textContent = parseNumberToBRL(response.discount);
   price.textContent = parseNumberToBRL(response.total);
-
 }
 
-function createProductElement(data){
-  const productContainer = document.createElement('div')
-  productContainer.classList.add('subProducts')
+function createProductElement(data) {
+  const productContainer = document.createElement('div');
+  productContainer.classList.add('subProducts');
 
   productContainer.innerHTML = `
     <img src="${data.product.photo.url}" alt="imagem do produto">
@@ -33,9 +33,22 @@ function createProductElement(data){
         <span class="name">${data.product.name}</span>
         <span class="price">${parseNumberToBRL(data.product.price)}</span>
     </div>
-  `
+  `;
   return productContainer;
+}
 
+document.getElementById('buyButton').addEventListener('click', buy);
+
+async function buy() {
+  await fetch('http://localhost:3000/api/carts/buy', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
+    },
+  });
+
+  showSuccessToast('Compra realizada com sucesso');
+  fetchAndRenderProducts();
 }
 
 fetchAndRenderProducts();

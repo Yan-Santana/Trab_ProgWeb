@@ -22,12 +22,21 @@ class CartsController {
     try {
       const cart = await cartServices.listAllProductsByUser(req.user.id);
       return res.status(200).json(cart);
-    } catch(error){
+    } catch (error) {
       const treatedError = treatError(error);
       res.status(treatedError.code).json(treatedError);
     }
   }
 
+  async buy(req, res) {
+    try {
+      const result = await cartServices.buy(req.user.id);
+      return res.status(200).json(result);
+    } catch (error) {
+      const treatedError = treatError(error);
+      res.status(treatedError.code).json(treatedError);
+    }
+  }
 }
 
 module.exports = { cartsController: new CartsController() };

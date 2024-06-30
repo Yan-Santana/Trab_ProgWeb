@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cary</title>
-    <link rel="stylesheet" href="../styles/cart.css">
-</head>
-<body>
-
-    <header class = "headerCart">
-        <div class = "subHeader">
-            <span>🛒Carrinho</span>
-
-        </div>
-        <div class = "subHeader">
-            <a href="../home/index.html">Início</a>
-            <a href="../catalog/index.html">Ofertas</a>
-            <a href="../catalog/index.html">Catálogo</a>
-        </div>
+    <link rel="stylesheet" href="../styles/cart.css" />
+    <link rel="stylesheet" href="../styles/toast.css" />
+  </head>
+  <body>
+    <header class="headerCart">
+      <div class="subHeader">
+        <span>🛒Carrinho</span>
+      </div>
+      <div class="subHeader">
+        <a href="../home/index.html">Início</a>
+        <a href="../catalog/index.html">Ofertas</a>
+        <a href="../catalog/index.html">Catálogo</a>
+      </div>
     </header>
 
-    <main>
+    <main id="container">
+      <ul class="containerProducts" id="containerProducts"></ul>
 
-        <ul class = "containerProducts" id="containerProducts"></ul>
-
-        <ul class = "containerTotal" >
-            <div class = "subContainerTotal">
-                <div>
-                    <p>Entrega</p>
-                </div>
-                <div>
-                    <span>Grátis</span>
-                </div>
-            </div>
-
-            <div class = "subContainerTotal">
-                <div>
-                    <p>Descontos</p>
-                </div>
-                <div>
-                    <span id="discount"></span>
-                </div>
-            </div>
-
-            <div class = "subContainerTotal">
-                <div>
-                    <h3>Total</h3>
-                </div>
-                <div>
-                    <span id="price"></span>
-                </div>
-            </div>
-        </ul>
-        <div class="finalizarBotao">
-            <div class="botao1">
-                <button>Finalizar Compra</button>
-            </div>
+      <ul class="containerTotal">
+        <div class="subContainerTotal">
+          <div>
+            <p>Entrega</p>
+          </div>
+          <div>
+            <span>Grátis</span>
+          </div>
         </div>
+
+        <div class="subContainerTotal">
+          <div>
+            <p>Descontos</p>
+          </div>
+          <div>
+            <span id="discount"></span>
+          </div>
+        </div>
+
+        <div class="subContainerTotal">
+          <div>
+            <h3>Total</h3>
+          </div>
+          <div>
+            <span id="price"></span>
+          </div>
+        </div>
+      </ul>
+      <div class="finalizarBotao">
+        <div class="botao1" id="buyButton">
+          <button>Finalizar Compra</button>
+        </div>
+      </div>
     </main>
     <script src="../utils/auth.js"></script>
+    <script src="../toast/index.js"></script>
     <script src="../utils/index.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

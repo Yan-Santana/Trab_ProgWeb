@@ -19,18 +19,27 @@ class CartServices {
   async listAllProductsByUser(userId) {
     const cart = await cartRepository.findAllProductsByUser(userId);
 
-    const total = cart.reduce( (acc, currentValue) => acc + (currentValue.toJSON().product.price * currentValue.toJSON().quantity), 0);
-    const subtotal = cart.reduce( (acc, currentValue) => acc + (currentValue.toJSON().product.old_price * currentValue.toJSON().quantity), 0);
+    const total = cart.reduce(
+      (acc, currentValue) => acc + currentValue.toJSON().product.price * currentValue.toJSON().quantity,
+      0,
+    );
+    const subtotal = cart.reduce(
+      (acc, currentValue) => acc + currentValue.toJSON().product.old_price * currentValue.toJSON().quantity,
+      0,
+    );
     const discount = subtotal - total;
 
     return {
       total,
-      discount: discount>0 ? discount : 0,
-      products: cart
+      discount: discount > 0 ? discount : 0,
+      products: cart,
     };
-
   }
 
+  async buy(userId) {
+    await cartRepository.buy(userId);
+    return { message: 'Compra realizada com sucesso' };
+  }
 }
 
 module.exports = {
