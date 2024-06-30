@@ -32,5 +32,24 @@ async function findAndLoadProduct() {
   image.setAttribute('src', product.photo.url);
 }
 
-findAndLoadProduct();
+document.getElementById('addProductToCartButton').addEventListener('click', addProductToCart);
 
+async function addProductToCart() {
+  const productID = getProductID();
+  const response = await fetch(`http://localhost:3000/api/carts/add-product`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
+    },
+    body: JSON.stringify({ product_id: productID, quantity: 1 }),
+  });
+
+  if (response.status === 201) {
+    showSuccessToast('Produto adicionado ao carrinho com sucesso!');
+  } else {
+    showErrorToast('Erro ao adicionar produto ao carrinho!');
+  }
+}
+
+findAndLoadProduct();
