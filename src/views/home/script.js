@@ -41,11 +41,13 @@ function setCategoryFilter(category) {
     }
     return fetchProducts();
   }
+
   const params = new URLSearchParams(window.location.search);
   const categoryByURL = params.get('category');
 
   if (categoryByURL) {
     filters.category = categoryByURL;
+    document.getElementById('categoryfilter').value = categoryByURL;
   }
 
   return fetchProducts();
@@ -80,4 +82,3 @@ function createProductElement(product) {
 }
 
 fetchProducts();
-
