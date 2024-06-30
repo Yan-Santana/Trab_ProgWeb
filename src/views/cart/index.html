@@ -9,10 +9,16 @@
 <body>
 
     <header class = "headerCart">
-        <span class = "textHeader">Carrinho</span>
+        <div class = "subHeader">
+            <span>🛒Carrinho</span>
+            
+        </div>
+        <div class = "subHeader">
+            <button> X </button>
+        </div>
     </header>
 
-    <main class = "containerMain" >
+    <main>
 
         <ul class = "containerProducts">
             <div class = "subProducts">
@@ -41,26 +47,48 @@
 
         <ul class = "containerTotal" >
             <div class = "subContainerTotal">
-                <p>SubTotal</p>
-                <span>R$ 600,00</span>
+                <div>
+                    <p>SubTotal</p>
+                </div>
+                <div>
+                    <span>R$ 600,00</span>
+                </div>
+            </div>
+            <div class = "subContainerTotal">
+                <div>
+                    <p>Entrega</p>
+                </div>
+                <div>
+                    <span>Grátis</span>
+                </div>
             </div>
 
             <div class = "subContainerTotal">
-                <p>Entrega</p>
-                <span>R$ 600,00</span>
+                <div>
+                    <p>Descontos</p>
+                </div>
+                <div>
+                    <span>- R$ 600,00</span>
+                </div>
             </div>
 
             <div class = "subContainerTotal">
-                <p>Descontos</p>
-                <span>R$ 600,00</span>
-            </div>
-
-            <div class = "subContainerTotal">
-                <h3>Total</h3>
-                <span>R$ 600,00</span>
+                <div>
+                    <h3>Total</h3>
+                </div>
+                <div> 
+                    <span>R$ 600,00</span>
+                </div>
             </div>
         </ul>
-        <button>Finalizar Compra</button>
+        <div class="finalizarBotao">
+            <div class="botao1">
+                <button>Finalizar Compra</button>
+            </div>
+            <div class="botao2">
+                <button>Limpar Carrinho</button>
+            </div>
+        </div>
     </main>
     
 </body>

@@ -22,12 +22,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 35px;
+  padding: 10px 30px;
   background-color: var(--body-color);
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  min-width: 95%;
   z-index: 1000;
 }
 
@@ -35,8 +35,7 @@ body {
   height: 5rem;
 }
 
-.navbar-links a,
-.navbar-icons a {
+.navbar-links a {
   color: var(--text-color);
   text-decoration: none;
   margin-left: 20px;
@@ -45,7 +44,7 @@ body {
 
 .navbar-icons a {
   font-size: 24px;
-  margin-left: 15px;
+  padding: 10px;
 }
 
 .container {
